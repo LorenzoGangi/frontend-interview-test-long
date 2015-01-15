@@ -1,0 +1,268 @@
+/*
+ * base styles 
+ * 
+ */
+
+html{
+    height: 100%;
+}
+
+body{
+    background: rgb(167,199,220); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(167,199,220,1) 0%, rgba(133,178,211,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(167,199,220,1)), color-stop(100%,rgba(133,178,211,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(167,199,220,1) 0%,rgba(133,178,211,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(167,199,220,1) 0%,rgba(133,178,211,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(167,199,220,1) 0%,rgba(133,178,211,1) 100%); /* IE10+ */
+    background: linear-gradient(top,  rgba(167,199,220,1) 0%,rgba(133,178,211,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7c7dc', endColorstr='#85b2d3',GradientType=0 ); /* IE6-9 */
+
+    
+    font-size: 13px;
+    min-width: 800px;
+    
+}
+
+br{
+    clear: left;
+}
+
+h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    background: rgba( 0, 0, 0, 0.7);
+    padding: 10px 5px;
+    box-shadow: 0px 1px 5px #fff;
+    height: 60px;
+}
+
+#header .avatar {
+    height: 25px;
+    width: 25px;
+}
+
+#links {
+    padding: 12px 25px 0 0;
+}
+
+#links a {
+    font-size: 16px;
+}
+
+#links li {
+    display: inline;
+    margin-left: 10px;
+}
+
+
+/*logo in header*/
+#logo{
+    display: inline-block;
+    float: left;
+}
+
+/*search in header*/
+
+#search{
+
+    display: inline;
+    float: left;
+    left: 50%;
+    margin-left: -25%;
+    position: relative;
+    width: 300px;
+    margin-top: 1em;
+}
+#search input[name="terms"]{
+    width: 260px;
+    padding: 2px 4px;
+    border: 2px solid #A2C4DA;
+    font-size: 1.25em;
+}
+
+#search input[name="terms"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px 1px #e5e5e5;
+}
+
+#search input[type="submit"]{
+    width: 30px;
+    padding: 4px;
+    vertical-align: top;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #fff;
+    border: 1px solid #6FD6F7;
+    background: -webkit-linear-gradient(#84defc, #07ace0);
+}
+
+#search input {
+    height: 27px;
+}
+
+#search input[type="submit"]:hover{
+    background: -webkit-linear-gradient(#FAFAFA, #A9E4F7);    
+}
+
+#links {
+    float: right;
+}
+
+#links a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*page content*/
+
+#page {
+    width: 850px;
+    margin: 10px auto 0px;
+    padding: 15px 25px;
+}
+
+
+/* Modal Post Input */
+.modal-dialog {
+    margin: 250px auto;
+    width: 400px;
+}
+
+#myModal textarea {
+    max-width: 335px;
+    width: 335px;
+    margin-bottom: 20px;
+    min-height: 120px;
+}
+
+#myModal p {
+    margin: 0;
+}
+
+#myModal h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.modal-body {
+    padding: 30px 0 30px 30px;
+    background: #f7f7f7;
+    border-radius: 5px;
+}
+
+/* Profile Card */
+.profile-col {
+    padding-right: 10px; 
+}
+
+.profile-card .avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.profile-card {
+    padding: 5px;
+    border-radius: 5px;
+    background: #f7f7f7;
+}
+
+.profile-card .username {
+    vertical-align: bottom;
+}
+/* Stream */
+.stream {
+    padding: 10px 0 15px 55px;
+    background: #f7f7f7;
+    border-radius: 5px;
+}
+
+.stream p {
+    font-size: .97em;
+}
+
+.stream ul {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+}
+
+.stream .avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.stream-item {
+    margin-bottom: 25px;
+}
+
+.stream-item .avatar {
+    margin-left: -65px;
+    float: left;
+}
+
+.stream-item .content {
+    padding: 0 0 0 15px;
+}
+
+.post-text {
+    margin-bottom: 0;
+}
+
+.stream-item textarea {
+    width: 100%;
+    max-width: 100%;
+    border: inset 1px 
+}
+
+.stream h3 {
+    margin: 0 0 30px -50px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.stream h4 {
+    font-weight: bold;
+    color: #0279C9;
+    font-size: 13px;
+}
+
+.stream-item {
+    padding-right: 5px;
+}
+
+/* Comment Stream */
+
+.comments-content {
+    background: #ededed;
+    padding: 2px;
+    margin-left: 5px;
+}
+
+.comment-stream {
+    background: #ededed;
+}
+
+.comment-stream li {
+    border-bottom: 1px solid #D7D5D5;
+    padding-top: 15px;
+}
+
+.comment-stream .avatar {
+    width: 25px;
+    height: 25px;
+    margin-left: 2px;
+}
+
+.comment-text {
+    float: left;
+    width: 90%;
+    margin-left: 8px;
+}
+
+.footer {
+    margin: 40px;
+}

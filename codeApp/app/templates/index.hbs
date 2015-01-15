@@ -1,0 +1,64 @@
+<div id="page">
+    <div class="row">
+        <div class="col-md-4 profile-col">
+            <div class="profile-card">
+                <img class="avatar" {{bind-attr src=loggedInUser.pic}}>
+                <span class="username">{{loggedInUser.username}}</span>
+            </div>
+        </div>
+        <div class="stream-col col-md-8">
+            <div class="stream">
+                <h3>Updates</h3>
+                <ul class="stream-items">
+                {{#each post in model itemController="post"}}
+                    <li class="stream-item">
+                        <div class="content">
+                            <div class="stream-item-header">
+                                <img  class="avatar" {{bind-attr src="post.userId.pic"}}>
+                                <h4>{{post.userId.username}}</h4>
+                            </div>
+                            <p class="post-text">{{post.text}}</p>
+                        </div>
+                        <div class="comments-content">
+                            {{#if post.comments}}
+                            <div class="comment-stream">
+                                    <ul>
+                                    {{#each comment in this.post.comments}}
+                                        <li class="clearfix">
+                                            <img class="avatar" {{bind-attr src=comment.userId.pic}}>
+                                            <div class="comment-text">
+                                                <h4>{{comment.userId.username}}</h4>
+                                                <p>{{comment.content}}</p>
+                                            </div>
+                                        </li>
+                                    {{/each}}
+                                    </ul>    
+                            </div>
+                            {{/if}}
+                            <div class="comment-reply">
+                                {{textarea type="text" value=post.newComment placeholder="post a comment" insert-newline="inputComment" rows=1}}
+                            </div>
+                        </div>
+                    </li>
+                {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center footer">
+            <p>This is a footer mesage</p>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3>Status Update</h3>
+                {{textarea type="text" value=postInput placeholder="insert post" insert-newline="enterPost" rows="1"}}
+                <p>Hit enter to post</p>
+            </div>
+        </div>
+    </div>
+</div>

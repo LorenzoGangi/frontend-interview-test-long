@@ -1,0 +1,17 @@
+<div id="header">
+    <div id="logo"><img src="images/logo.png" alt="the network"></div>
+    <div id="search">
+        <form method="get" action="#">
+            <input type="search" name="terms" placeholder="Search....">
+            <input type="submit" value="Go">
+        </form>
+    </div>
+    <div id="links">
+        <ul>
+            <li>{{link-to 'Home' 'index'}}</li>
+            <li><a {{action 'postUpdate'}}>Post an update</a></li>
+            <li><img class="avatar" {{bind-attr src=pic}} alt="Logo"></li>
+        </ul>
+    </div>
+</div>
+{{outlet}}
